@@ -1,0 +1,12 @@
+# ignore build artifacts
+build/
+# ignore the dist directory
+dist/
+
+# ignore all log files
+*.log
+
+# ignore any temp or backup files
+*~
+*.bak 
+.DS_Store

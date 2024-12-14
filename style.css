@@ -1,0 +1,33 @@
+.bento {
+  display: grid;
+  grid-template-columns: 1fr, 2fr, 1fr;
+  grid-template-rows: repeat(3, 13rem);
+  grid-template-areas:
+    'column1 column2 column3'
+    'column1 column2 column3'
+    'column1 column4 column4';
+  gap: 1rem;
+  width: 1092px;
+}
+
+.bento-item {
+  display: grid;
+  gap: 1rem;
+  border-radius: 8px;
+}
+
+.column1 {
+  grid-area: column1;
+}
+
+.column2 {
+  grid-area: column2;
+}
+
+.column3 {
+  grid-area: column3;
+}
+
+.column4 {
+  grid-area: column4;
+}
