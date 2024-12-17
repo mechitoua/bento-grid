@@ -13,141 +13,73 @@
       tailwind.config = {
         theme: {
           extend: {
-            colors: {
-              'purple-hero': '#7B5CFA',
-              'purple-light': '#EDE9FE',
-              'yellow-light': '#FEF3C7',
-              'yellow-primary': '#FFD233',
-            },
             fontFamily: {
               sans: ['DM Sans', 'sans-serif']
             }
+          },
+          colors: {
+            yellow: {
+              100: 'rgb(250, 238, 226)',
+              500: 'rgb(255, 204, 105)'
+            },
+            purple: {
+              100: 'rgb(220, 209, 252)',
+              500: 'rgb(118, 81, 220)'
+            },
+            black: 'rgb(25, 25, 25)',
+            white: 'rgb(255, 255, 255)',
+            lightGray: 'rgb(245, 245, 245)'
           }
         }
       }
     </script>
   </head>
-  <body class="bg-gray-50 min-h-screen p-4 md:p-8">
-    <div class="w-[1120px] mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-4 auto-rows-fr gap-8 h-[886px] [grid-template-columns:256px_256px_256px_256px] [grid-template-areas:'item1_item2_item2_item3'_'item6_item4_item5_item3'_'item6_item8_item7_item7']">
-        <!-- Create Post Card - Item 1 -->
-        <div class="[grid-area:item1] bg-yellow-light rounded-3xl p-8 flex flex-col justify-between">
-          <h1 class="text-4xl font-medium tracking-tight max-w-[250px]">
-            Create and schedule content <span class="text-purple-hero">quicker.</span>
-          </h1>
-          <button class="mt-8 bg-yellow-primary text-black px-6 py-3 rounded-full flex items-center gap-2 w-fit hover:scale-105 transition-transform">
-            Create Post
-            <img src="./assets/images/illustration-create-post.webp" alt="Create post" class="w-4 h-4" />
-          </button>
+  <body class="bg-lightGray min-h-screen p-4 md:p-[80px]">
+    <div class="w-[1120px] mx-auto text-black">
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-8 h-[886px] [grid-template-columns:256px_256px_256px_256px] [grid-template-rows:1.3fr_1fr_1fr] [grid-template-areas:'col1_item2_item2_item3'_'col1_item4_item5_item3'_'col1_item8_item7_item7']"
+      >
+        <!-- Column 1 with nested grid -->
+        <div class="[grid-area:col1] grid grid-rows-2 gap-8">
+          <!-- Create Post Card - Item 1 -->
+          <div
+            class="bg-yellow-100 text-[2.5rem] font-medium tracking-tighter leading-[0.9] flex flex-col align-center justify-center gap-6 rounded-xl p-8"
+          >
+            <h1>Create and schedule content <em class="text-purple-500">quicker.</em></h1>
+            <img
+              src="./assets/images/illustration-create-post.webp"
+              alt=" create post illustration"
+            />
+          </div>
+
+          <!-- AI Content Card - Item 6 -->
+          <div
+            class="bg-yellow-500 p-5 font-medium text-[2.5rem] leading-[0.9] flex flex-col align-center justify-between space-y-4 rounded-xl"
+          >
+            <h1 class="text-black text-[2.5rem] p-2 tracking-tighter font-medium leading-[0.9]">
+              Write your content using AI.
+            </h1>
+            <img src="./assets/images/illustration-ai-content.webp" alt="ai content illustration" />
+          </div>
         </div>
 
         <!-- Hero Card - Item 2 -->
-        <div class="[grid-area:item2] bg-purple-hero rounded-3xl p-8 text-white text-center flex flex-col justify-center">
-          <h2 class="text-5xl font-bold mb-2">Social Media <span class="text-yellow-primary">10x</span></h2>
-          <p class="text-3xl italic mb-6">Faster with AI</p>
-          <img src="./assets/images/illustration-five-stars.webp" alt="Five stars" class="h-6 mx-auto mb-2" />
-          <p class="text-sm">Over 4,000 5-star reviews</p>
-        </div>
+        <div class="[grid-area:item2] bg-purple-500 rounded-xl"></div>
 
         <!-- Analytics Card - Item 3 -->
-        <div class="[grid-area:item3] bg-purple-light rounded-3xl p-6">
-          <h3 class="text-xl font-medium mb-4">Schedule to social media.</h3>
-          <div class="bg-white rounded-2xl p-4">
-            <h4 class="text-lg mb-4">Best Time to Post</h4>
-            <div class="grid grid-cols-7 gap-2 mb-4">
-              <div class="text-xs text-center text-gray-500">Mon</div>
-              <div class="text-xs text-center text-gray-500">Tue</div>
-              <div class="text-xs text-center text-gray-500">Wed</div>
-              <div class="text-xs text-center text-gray-500">Thu</div>
-              <div class="text-xs text-center text-gray-500">Fri</div>
-              <div class="text-xs text-center text-gray-500">Sat</div>
-              <div class="text-xs text-center text-gray-500">Sun</div>
-            </div>
-            <div class="flex items-end gap-2 h-32 mb-4">
-              <div class="flex-1 bg-purple-hero rounded-sm" style="height: 40%"></div>
-              <div class="flex-1 bg-purple-hero rounded-sm" style="height: 60%"></div>
-              <div class="flex-1 bg-purple-hero rounded-sm" style="height: 80%"></div>
-              <div class="flex-1 bg-purple-hero rounded-sm" style="height: 100%"></div>
-              <div class="flex-1 bg-purple-hero rounded-sm" style="height: 70%"></div>
-              <div class="flex-1 bg-purple-hero rounded-sm" style="height: 50%"></div>
-              <div class="flex-1 bg-purple-hero rounded-sm" style="height: 30%"></div>
-            </div>
-            <p class="text-sm text-gray-600">Optimize post timings to publish content at the perfect time for your audience.</p>
-          </div>
-        </div>
+        <div class="[grid-area:item3] bg-purple-100 rounded-xl"></div>
 
         <!-- Social Accounts Card - Item 4 -->
-        <div class="[grid-area:item4] bg-white rounded-3xl p-6">
-          <h3 class="text-xl font-medium mb-4">Manage multiple accounts and platforms.</h3>
-          <div class="flex flex-col gap-3">
-            <div class="flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-xl">
-              <img src="./assets/images/illustration-multiple-platforms.webp" alt="Instagram" class="w-6 h-6" />
-              <span class="text-sm">@YourCo</span>
-            </div>
-            <div class="flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-xl">
-              <img src="./assets/images/illustration-multiple-platforms.webp" alt="Twitter" class="w-6 h-6" />
-              <span class="text-sm">@YourCo</span>
-            </div>
-          </div>
-          <p class="mt-4 text-gray-600 text-sm">>56% faster audience growth</p>
-        </div>
+        <div class="[grid-area:item4] bg-white rounded-xl"></div>
 
         <!-- Schedule Card - Item 5 -->
-        <div class="[grid-area:item5] bg-yellow-primary rounded-3xl p-6">
-          <h3 class="text-xl font-medium mb-4">Maintain a consistent posting schedule.</h3>
-          <div class="bg-white rounded-2xl p-4">
-            <div class="flex justify-between items-center mb-4">
-              <span class="font-medium">August 2024</span>
-              <span class="bg-purple-hero text-white px-3 py-1 rounded-full text-sm">Weekly</span>
-            </div>
-            <div class="flex justify-between">
-              <div class="w-2 h-2 bg-purple-hero rounded-full"></div>
-              <div class="w-2 h-2 bg-purple-hero rounded-full"></div>
-              <div class="w-2 h-2 bg-purple-hero rounded-full"></div>
-              <div class="w-2 h-2 bg-purple-hero rounded-full"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- AI Content Card - Item 6 -->
-        <div class="[grid-area:item6] bg-yellow-primary rounded-3xl p-8">
-          <h2 class="text-2xl font-medium mb-6">Write your content using AI.</h2>
-          <div class="bg-white/20 rounded-2xl p-6">
-            <p class="text-sm">Give me 5 tips to growth my follower on Insta!</p>
-            <img src="./assets/images/illustration-ai-content.webp" alt="AI Content" class="mt-4 w-32" />
-          </div>
-        </div>
+        <div class="[grid-area:item5] bg-yellow-500 rounded-xl"></div>
 
         <!-- Growth Stats Card - Item 7 -->
-        <div class="[grid-area:item7] bg-purple-hero rounded-3xl p-8 text-white">
-          <h3 class="text-2xl font-medium mb-6">Grow followers with non-stop content.</h3>
-          <div class="bg-white/20 rounded-2xl p-6">
-            <div class="flex items-center gap-3">
-              <span class="text-2xl font-medium">20,642</span>
-              <div class="w-6 h-6 bg-yellow-primary rounded-full flex items-center justify-center text-black">↑</div>
-              <span class="text-sm text-green-400">+400%</span>
-            </div>
-            <div class="mt-4 flex items-center gap-3">
-              <span class="text-2xl font-medium">89,532</span>
-              <div class="w-6 h-6 bg-yellow-primary rounded-full flex items-center justify-center text-black">↑</div>
-              <span class="text-sm text-green-400">+150%</span>
-            </div>
-          </div>
-        </div>
+        <div class="[grid-area:item7] bg-purple-500 rounded-xl"></div>
 
         <!-- Audience Card - Item 8 -->
-        <div class="[grid-area:item8] bg-white rounded-3xl p-6">
-          <h3 class="text-xl font-medium mb-4">Audience Growth</h3>
-          <div class="flex items-center gap-2">
-            <div class="w-12 h-12 bg-purple-hero rounded-full flex items-center justify-center">
-              <span class="text-white text-xl">↑</span>
-            </div>
-            <div>
-              <p class="text-sm text-gray-600">Monthly Growth</p>
-              <p class="text-xl font-medium">+2,400</p>
-            </div>
-          </div>
-        </div>
+        <div class="[grid-area:item8] bg-white rounded-xl"></div>
       </div>
     </div>
   </body>
