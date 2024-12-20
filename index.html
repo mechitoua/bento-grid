@@ -37,7 +37,7 @@
   <body class="bg-lightGray min-h-screen p-4 md:p-[80px]">
     <div class="w-[1120px] mx-auto text-black">
       <div
-        class="grid grid-cols-1 md:grid-cols-4 gap-8 h-[886px] [grid-template-columns:256px_256px_256px_256px] [grid-template-rows:1.3fr_1fr_1fr] [grid-template-areas:'col1_item2_item2_item3'_'col1_item4_item5_item3'_'col1_item8_item7_item7']"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 [grid-template-columns:repeat(4,minmax(250px,1fr))] [grid-template-rows:1.3fr_1fr_1fr] [grid-template-areas:'col1_item2_item2_item3'_'col1_item4_item5_item3'_'col1_item8_item7_item7']"
       >
         <!-- Column 1 with nested grid -->
         <div class="[grid-area:col1] grid grid-rows-2 gap-8">
@@ -95,12 +95,15 @@
         </div>
 
         <!-- Social Accounts Card - Item 4 -->
-        <div class="[grid-area:item4] bg-white rounded-xl">
+        <div class="[grid-area:item4] bg-white rounded-xl p-4 overflow-hidden">
           <img
-            class="w-[2rem]"
+            class="w-full transform scale-[1.4] mt-4 translate-x-[60px] bg-transparent"
             src="./assets/images/illustration-multiple-platforms.webp"
             alt="multiple illustration-multiple-platforms"
           />
+          <h2 class="font-medium text-[2rem] font-bold p-4 leading-[0.9] tracking-tighter">
+            Manage multiple accounts and platforms.
+          </h2>
         </div>
 
         <!-- Schedule Card - Item 5 -->
